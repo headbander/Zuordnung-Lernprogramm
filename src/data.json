@@ -1,0 +1,249 @@
+{
+  "diagnostic": {
+    "items": [
+      {
+        "id": "diag-1",
+        "question": "3 Hefte kosten 4,50 €. Wie viel kosten 7 Hefte?",
+        "options": [
+          { "text": "8,50 €", "correct": false, "errorType": "additive" },
+          { "text": "10,50 €", "correct": true, "errorType": null },
+          { "text": "31,50 €", "correct": false, "errorType": "multiplication-error" }
+        ],
+        "correctFeedback": "✓ Richtig! Du hast multiplikativ gedacht: 7 Hefte = (7/3) × 4,50 € = 10,50 €",
+        "wrongFeedback": "⚠️ Bei proportionalen Zuordnungen verdoppelt sich der Preis, wenn sich die Menge verdoppelt. Hier: 1 Heft = 1,50 €, also 7 Hefte = 7 × 1,50 € = 10,50 €"
+      },
+      {
+        "id": "diag-2",
+        "question": "6 Arbeiter brauchen 8 Tage für einen Auftrag. Wie lange brauchen 12 Arbeiter?",
+        "options": [
+          { "text": "16 Tage", "correct": false, "errorType": "proportional-instead-of-antiproportional" },
+          { "text": "4 Tage", "correct": true, "errorType": null },
+          { "text": "2 Tage", "correct": false, "errorType": "calculation-error" }
+        ],
+        "correctFeedback": "✓ Richtig! Bei antiproportionalen Zuordnungen: Mehr Arbeiter → weniger Zeit. 6 × 8 = 48, also 12 × 4 = 48",
+        "wrongFeedback": "⚠️ Das ist antiproportional! Mehr Arbeiter → weniger Zeit. Das Produkt (Arbeiter × Tage) bleibt konstant: 6 × 8 = 48, also 12 × ? = 48 → ? = 4"
+      },
+      {
+        "id": "diag-3",
+        "question": "Ein Quadrat hat Seitenlänge 3 cm und Fläche 9 cm². Bei Seitenlänge 6 cm ist die Fläche:",
+        "options": [
+          { "text": "18 cm²", "correct": false, "errorType": "overlinearization" },
+          { "text": "36 cm²", "correct": true, "errorType": null },
+          { "text": "12 cm²", "correct": false, "errorType": "calculation-error" }
+        ],
+        "correctFeedback": "✓ Richtig! Du hast erkannt, dass bei Flächen die Änderung quadratisch wirkt: 6² = 36 cm²",
+        "wrongFeedback": "⚠️ Das ist ein häufiger Denkfehler! Fläche = Seite × Seite. Bei doppelter Seite: 2 × Seite × 2 × Seite = 4× größere Fläche! Hier: 6² = 36 cm²"
+      },
+      {
+        "id": "diag-4",
+        "question": "Eine proportionale Zuordnung hat als Graph:",
+        "options": [
+          { "text": "Eine Gerade durch den Ursprung (0,0)", "correct": true, "errorType": null },
+          { "text": "Eine Gerade, die nicht durch (0,0) geht", "correct": false, "errorType": "graph-error" },
+          { "text": "Eine gekrümmte Linie (Parabel oder Hyperbel)", "correct": false, "errorType": "graph-error" }
+        ],
+        "correctFeedback": "✓ Richtig! Eine Ursprungsgerade zeigt proportionale Zuordnungen. Der Graph geht durch (0,0) und hat konstante Steigung.",
+        "wrongFeedback": "⚠️ Bei proportionalen Zuordnungen muss der Graph durch den Ursprung (0,0) gehen und eine Gerade sein!"
+      },
+      {
+        "id": "diag-5",
+        "question": "Ist der Zusammenhang proportional? 'Je älter ein Kind, desto größer ist es.'",
+        "options": [
+          { "text": "Nein, nicht proportional", "correct": true, "errorType": null },
+          { "text": "Ja, proportional", "correct": false, "errorType": "conceptual-error" },
+          { "text": "Ja, antiproportional", "correct": false, "errorType": "conceptual-error" }
+        ],
+        "correctFeedback": "✓ Richtig! Kinder wachsen nicht proportional mit dem Alter. Ein 10-jähriges Kind ist nicht doppelt so groß wie ein 5-jähriges.",
+        "wrongFeedback": "⚠️ Nicht proportional! Ein 10-Jähriger ist nicht doppelt so groß wie ein 5-Jähriger. Wachstum verlangsamt sich mit dem Alter."
+      }
+    ]
+  },
+  "tables": {
+    "tasks": [
+      {
+        "id": "table-1",
+        "type": "recognition",
+        "question": "Welche Zuordnung liegt vor?",
+        "data": [[2, 30], [5, 12], [8, 7.5], [10, 6]],
+        "correct": "antiproportional",
+        "hints": [
+          "Berechne y/x für alle Wertepaare. Was fällt dir auf?",
+          "Probiere auch x · y. Ist eines der beiden immer gleich?",
+          "Bei proportional ist y/x konstant, bei antiproportional ist x·y konstant"
+        ],
+        "correctFeedback": "✓ Richtig! Es ist antiproportional. Das Produkt x · y ist immer 60: 2·30=60, 5·12=60, 8·7,5=60, 10·6=60",
+        "wrongFeedback": "⚠️ Prüfe das Produkt x · y. Bei antiproportionalen Zuordnungen bleibt das Produkt konstant."
+      },
+      {
+        "id": "table-2",
+        "type": "recognition",
+        "question": "Welche Zuordnung liegt vor?",
+        "data": [[3, 9], [5, 15], [7, 21], [10, 30]],
+        "correct": "proportional",
+        "hints": [
+          "Berechne den Quotienten y/x für jedes Wertepaar",
+          "Ist der Quotient überall gleich?",
+          "Der Proportionalitätsfaktor ist y/x = 3"
+        ],
+        "correctFeedback": "✓ Richtig! Es ist proportional. Der Quotient y/x ist immer 3: 9/3=3, 15/5=3, 21/7=3, 30/10=3",
+        "wrongFeedback": "⚠️ Der Quotient y/x ist konstant bei proportionalen Zuordnungen."
+      },
+      {
+        "id": "table-3",
+        "type": "completion",
+        "description": "Fülle die Tabelle aus (proportional, k=0.8):",
+        "data": [[3, 2.4], [null, 4.0], [12, null], [null, 10.0]],
+        "solution": [[3, 2.4], [5, 4.0], [12, 9.6], [12.5, 10.0]],
+        "hints": [
+          "Finde zuerst den Proportionalitätsfaktor k aus dem ersten Wertepaar",
+          "k = y/x = 2,4/3 = 0,8",
+          "Nutze k = 0,8 für alle anderen Werte: y = 0,8 · x"
+        ]
+      },
+      {
+        "id": "table-4",
+        "type": "completion",
+        "description": "Vervollständige (antiproportional, Produkt=60):",
+        "data": [[4, 15], [6, null], [null, 12], [12, null]],
+        "solution": [[4, 15], [6, 10], [5, 12], [12, 5]],
+        "hints": [
+          "Bei antiproportional gilt: x · y = konstant",
+          "Das Produkt ist 4 · 15 = 60",
+          "Für alle Paare muss x · y = 60 gelten"
+        ]
+      }
+    ]
+  },
+  "strategies": {
+    "tasks": [
+      {
+        "id": "strat-1",
+        "type": "choice",
+        "question": "8 kg Äpfel kosten 12 €. Wie viel kosten 20 kg?",
+        "solution": 30,
+        "unit": "€",
+        "hints": [
+          "Du kannst über die 1 gehen: 1 kg = 12/8 = 1,50 €",
+          "Oder clever rechnen: 20 = 2×8 + 4, also 2×12 + 6 = 30 €",
+          "Oder mit Faktor: k = 1,5, dann 20 × 1,5 = 30 €"
+        ]
+      },
+      {
+        "id": "strat-2",
+        "type": "choice",
+        "question": "5 Liter Milch kosten 4,50 €. Wie viel kosten 15 Liter?",
+        "solution": 13.5,
+        "unit": "€",
+        "hints": [
+          "15 ist das Dreifache von 5 → Verdreifache auch den Preis!",
+          "3 × 4,50 € = 13,50 €",
+          "Die Operator-Strategie ist hier besonders schnell!"
+        ]
+      },
+      {
+        "id": "strat-3",
+        "type": "mixed",
+        "question": "4 Torten reichen für 12 Gäste. Wie viele Torten für 18 Gäste?",
+        "solution": 6,
+        "proportionType": "proportional",
+        "hints": [
+          "Mehr Gäste → mehr Torten (proportional!)",
+          "18 = 1,5 × 12, also auch 1,5 × 4 Torten",
+          "6 Torten"
+        ]
+      },
+      {
+        "id": "strat-4",
+        "type": "mixed",
+        "question": "5 Maschinen produzieren Teile in 6 Stunden. Wie lange brauchen 10 Maschinen?",
+        "solution": 3,
+        "unit": "Stunden",
+        "proportionType": "antiproportional",
+        "hints": [
+          "Mehr Maschinen → weniger Zeit (antiproportional!)",
+          "Doppelte Maschinen → halbe Zeit",
+          "10 = 2 × 5, also 6 ÷ 2 = 3 Stunden"
+        ]
+      }
+    ]
+  },
+  "context": {
+    "tasks": [
+      {
+        "id": "context-1",
+        "type": "situation",
+        "situation": "Je mehr Fußballer auf dem Platz, desto schneller ist das Spiel zu Ende",
+        "correct": "antiproportional",
+        "explanation": "Mehr Spieler → kürzere Spielzeit (wenn sie zusammenspielen). Das ist antiproportional."
+      },
+      {
+        "id": "context-2",
+        "type": "situation",
+        "situation": "Je älter ein Baum, desto höher ist er",
+        "correct": "none",
+        "explanation": "Bäume wachsen nicht proportional! Ein 20-jähriger Baum ist nicht doppelt so hoch wie ein 10-jähriger. Das Wachstum verlangsamt sich."
+      },
+      {
+        "id": "context-3",
+        "type": "problem",
+        "text": "250 g Käse kosten 3,75 €. Wie viel kosten 400 g?",
+        "solution": 6.0,
+        "unit": "€",
+        "hints": [
+          "Über die 1: 1 g Käse kostet 3,75 ÷ 250 = 0,015 €",
+          "400 g kosten dann 400 × 0,015 €",
+          "Oder mit Faktor: k = 0,015, dann 400 × 0,015 = 6 €"
+        ]
+      },
+      {
+        "id": "context-4",
+        "type": "problem",
+        "text": "8 Maler streichen eine Turnhalle in 5 Tagen. Wie lange brauchen 10 Maler?",
+        "solution": 4,
+        "unit": "Tage",
+        "hints": [
+          "Was bleibt bei antiproportionalen Zuordnungen konstant?",
+          "Die Gesamtarbeit (Maler × Tage) bleibt gleich!",
+          "8 × 5 = 40, also 10 × ? = 40 → ? = 4 Tage"
+        ]
+      },
+      {
+        "id": "context-5",
+        "type": "trap",
+        "text": "Sue und Julie laufen gleich schnell um eine Bahn. Als Sue 9 Runden hatte, hatte Julie 3 Runden. Wie viele Runden hatte Sue, als Julie 15 Runden hatte?",
+        "options": [
+          { "value": 45, "correct": false, "trap": "proportional" },
+          { "value": 21, "correct": true },
+          { "value": 18, "correct": false }
+        ],
+        "correctFeedback": "✓ Richtig! Sue ist immer 6 Runden voraus. Das ist ein additiver Zusammenhang, nicht proportional!",
+        "wrongFeedback": "⚠️ Vorsicht! Das ist NICHT proportional! Sue startet mit Vorsprung. Sie ist immer 6 Runden voraus: Julie 3 → Sue 9 (Differenz: 6), Julie 15 → Sue 21 (Differenz: 6)"
+      }
+    ]
+  },
+  "final": {
+    "problems": [
+      {
+        "id": "final-1",
+        "type": "recognition",
+        "question": "Erkenne den Zuordnungstyp:",
+        "data": [[5, 20], [10, 10], [20, 5]],
+        "correct": "antiproportional"
+      },
+      {
+        "id": "final-2",
+        "type": "calculation",
+        "question": "7 Bücher kosten 91 €. Wie viel kosten 4 Bücher?",
+        "solution": 52,
+        "unit": "€"
+      },
+      {
+        "id": "final-3",
+        "type": "conceptual",
+        "question": "Ein 8-jähriges Kind ist 120 cm groß. Ist ein 16-jähriges Kind 240 cm groß?",
+        "correct": false,
+        "reason": "Nicht proportional! Körpergröße wächst nicht linear mit dem Alter."
+      }
+    ]
+  }
+}
